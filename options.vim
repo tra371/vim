@@ -5,7 +5,7 @@ filetype plugin indent on
 syntax on
 augroup LightweightTSXSyntax
     autocmd!
-    autocmd FileType javascriptreact,typescriptreact setlocal syntax=javascript
+    autocmd FileType typescript,javascriptreact,typescriptreact setlocal syntax=javascript
 augroup END
 set expandtab
 set shiftwidth=4
