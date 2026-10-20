@@ -10,13 +10,13 @@ let lspServers = [
         \ #{
         \    name: 'tsserver',
         \    filetype: ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'],
-        \    path: '/Users/tuna/.nvm/versions/node/v24.21.0/bin/typescript-language-server',
+        \    path: 'typescript-language-server',
         \    args: ['--stdio']
         \ },
         \ #{
         \    name: 'pyright',
         \    filetype: ['python'],
-        \    path: '/Users/tuna/.nvm/versions/node/v24.21.0/bin/pyright-langserver',
+        \    path: 'pyright-langserver',
         \    args: ['--stdio']
         \ },
         \ ]
