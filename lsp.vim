@@ -19,6 +19,21 @@ let lspServers = [
         \    path: 'pyright-langserver',
         \    args: ['--stdio']
         \ },
+        \ #{
+        \    name: 'rustanalyzer',
+        \    filetype: ['rust'],
+        \    path: 'rust-analyzer',
+        \    args: [],
+        \    syncInit: v:true,
+        \    initializationOptions: {
+        \      'rust-analyzer': {
+        \        'cargo': {
+        \          'buildScripts': { 'enable': v:true }
+        \        },
+        \        'procMacro': { 'enable': v:true }
+        \      }
+        \    }
+        \ }
         \ ]
 
 autocmd User LspSetup call LspAddServer(lspServers)
@@ -32,5 +47,4 @@ nnoremap gl :LspDiag current<CR>
 nnoremap <leader>nd :LspDiag next \| LspDiag current<CR>
 nnoremap <leader>pd :LspDiag prev \| LspDiag current<CR>
 inoremap <silent> <C-Space> <C-x><C-o>
-
 
